@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
-        header("Location: dashboard_user.php"); // Redirect to User Dashboard
+        header("Location: dashboard.php"); // Redirect to User Dashboard
         exit();
     } else {
         echo "<script>alert('Invalid email or password'); window.location.href='userlogin.html';</script>";
